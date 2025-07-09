@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Text Style</title>
+  <style>
+    #textBlock {
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Change Text Style</h2>
+
+  <label>Font Size:
+    <select id="fontSizeSelect">
+      <option value="16px">16px</option>
+      <option value="20px">20px</option>
+      <option value="24px">24px</option>
+      <option value="32px">32px</option>
+    </select>
+  </label>
+
+  <label>Font Color:
+    <select id="fontColorSelect">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+  </label>
+
+  <label>Font Family:
+    <select id="fontFamilySelect">
+      <option value="Arial">Arial</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Times New Roman">Times New Roman</option>
+    </select>
+  </label>
+
+  <div id="textBlock">
+    This is your sample text. Change my style using the dropdowns above!
+  </div>
+
+  <script>
+    const textBlock = document.getElementById("textBlock");
+    document.getElementById("fontSizeSelect").addEventListener("change", function() {
+      textBlock.style.fontSize = this.value;
+    });
+
+    document.getElementById("fontColorSelect").addEventListener("change", function() {
+      textBlock.style.color = this.value;
+    });
+
+    document.getElementById("fontFamilySelect").addEventListener("change", function() {
+      textBlock.style.fontFamily = this.value;
+    });
+  </script>
+  <link rel="javaScript" href="index.js">
+</body>
+</html>
